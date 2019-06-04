@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="./css/button.css">
+<title>Insert title here</title>
+<style>
+.btn {
+	width: 60px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 5px 5px 5px gray;
+	margin: 2px;
+	font-size: 15pt;
+}
+
+.btn:hover, .middlebox:hover {
+	background-color: red;
+	text-shadow: 5px 5px 5px red;
+}
+
+.longbox {
+	width: 200px;
+	height: 40px;
+	text-align: right;
+	border: 2px solid green;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 5px 5px 5px gray;
+	margin: 5px;
+	font-size: 15pt;
+}
+
+.middlebox {
+	width: 130px;
+	height: 50px;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 5px 5px 5px gray;
+	margin: 5px;
+	font-size: 15pt;
+}
+</style>
+<script>
+function btn(n){	
+	if(document.getElementById('longbox').value == 0){
+		document.getElementById('longbox').value= n	;
+	}else{
+		if(number.isInteger(n)){
+		a = document.getElementById('longbox').value	
+		document.getElementById('longbox').value= a + n		
+	}else{
+		var full = document.getElementById('longbox').value
+		var last = full.charAt(full.length -1)
+		if(last == "+"||last=="-"||last=="."||last=="*"||last=="/"||last=="%"){
+			var silce = full.slice(0,-1)
+			document.getElementById('longbox').value = silce + n
+		} else{
+			s = document.getElementById('longbox').value
+			document.getElementById('longbox').value = s + a
+			}
+		}			
+	}		
+}
+	
+
+function equl(){
+	c = eval(document.getElementById('longbox').value)	
+	document.getElementById('longbox').value = c
+	
+}
+function C() {
+    document.getElementById('longbox').value = "0";
+}
+
+
+
+
+</script>
+</head>
+
+<body>
+	<table border="0" style="border: 2px solid blue;">
+		<tr>
+			<th colspan="5"><input type=text class="longbox" value=0
+				id="longbox"></th>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" class="btn" onclick='btn(7)'></td>
+			<td><input type="button" value="8" class="btn" onclick='btn(8)'></td>
+			<td><input type="button" value="9" class="btn" onclick='btn(9)'></td>
+			<td colspan="2"><input type="reset" value="C" class="middlebox"
+				onclick="C()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" class="btn" onclick='btn(4)'></td>
+			<td><input type="button" value="5" class="btn" onclick='btn(5)'></td>
+			<td><input type="button" value="6" class="btn" onclick='btn(6)'></td>
+			<td><input type="button" value="/" class="btn"
+				onclick='btn(value)'></td>
+			<td><input type="button" value="%" class="btn"
+				onclick='btn(value)'></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1" class="btn" onclick='btn(1)'></td>
+			<td><input type="button" value="2" class="btn" onclick='btn(2)'></td>
+			<td><input type="button" value="3" class="btn" onclick='btn(3)'></td>
+			<td><input type="button" value="*" class="btn"
+				onclick='btn(value)'></td>
+			<td><input type="button" value="+" class="btn"
+				onclick='btn(value)'></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="0" class="btn" onclick='btn(0)'></td>
+			<td><input type="button" value="." class="btn"
+				onclick='btn(value)'></td>
+			<td colspan="2"><input type="button" value="=" id="equl"
+				class="middlebox" onclick='equl()'></td>
+			<td><input type="button" value="-" class="btn"
+				onclick='btn(value)'></td>
+		</tr>
+	</table>
+
+</body>
+</html>

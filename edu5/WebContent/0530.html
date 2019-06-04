@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>jQuery image</title>
+<style>
+ h1{
+ 	text-align: center;
+ }
+ img{ 	
+ 	display: block;
+ 	margin: 0 auto;
+ }
+ 
+</style>
+<script type="text/javascript">
+$(function(){
+	$('img').hide();
+	$('img').first().show();
+	$('img').css('width',500)
+	$('img').css('height',500)
+	$('#next').click(function() {
+		$('body').append($('img').first());
+		$('img').last().hide();
+		$('img').first().show();
+	})
+	$('#back').click(function() {
+		$('img').first().hide();
+		$('div').before($('img').last());
+		$('img').first().show();		
+	})
+})
+</script>
+</head>
+<body>
+	<h1>Manual Slides</h1>
+	<div>
+	<img src="http://70.12.115.63:9090/edu5/img/고양이1.jpg" width="200px" height="200px">	
+	<img src="http://70.12.115.63:9090/edu5/img/고양이2.jpg" width="200px" height="200px">	
+	<img src="http://70.12.115.63:9090/edu5/img/고양이3.jpg" width="200px" height="200px">	
+	<img src="http://70.12.115.63:9090/edu5/img/고양이4.jpg" width="200px" height="200px">	
+	<img src="http://70.12.115.63:9090/edu5/img/고양이5.jpg" width="200px" height="200px">	
+	</div>
+	<button id= "next" value="next">next</button>
+	<button id= "back" value="back">back</button>
+</body>
+</html>

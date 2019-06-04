@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#btn').click(function() {
+		getLocation();
+	});
+});
+
+function getLocation(){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(show);
+	}else{
+		$('#msg').text('지원되지않는 브라우저입니다.');
+	}
+}
+
+function show(location){
+	var i = location.coords.latitude; //위도
+	var j = location.coords.longitude; //경도
+	$('#msg').text("위도"+i+" 경도 :"+j);
+}
+</script>
+
+<title>위치 정보</title>
+</head>
+<body>
+	<h2>위치 정보</h2>
+	<button id="btn">위치정보</button>
+	<div id="msg"></div>
+</body>
+</html>

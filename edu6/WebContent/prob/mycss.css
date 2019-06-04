@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+<style>
+page{
+	
+}
+
+header {
+	text-align: center;	
+	background-color: orange;
+	height: 8em;
+}
+header ul{
+	width: 70%;
+	float: left;
+}
+header ul li a{
+	color: yellow;
+}
+header div ul{
+	 	float: right; 	
+	 	width: 20%
+}
+header div a {
+	color: yellow;
+	display: inline; 
+	margin: 10px;	
+}
+header div {
+	text-align: right;
+	
+}
+ .menu1 li:nth-child(n){ 	
+ 	list-style: none;
+ 	display: inline; 	
+ 	padding: 20px;
+ 	margin: 20px;
+ 	background-color: black;
+ 	border-radius: 10px 10px 10px 10px;	
+ 	size: 20px;
+ }
+ .menu2 li:nth-child(n){ 	
+ 	list-style: none;
+ 	display: inline; 	
+ 	padding: 10px;
+ 	background-color: black;
+ 	border-radius: 10px 10px 10px 10px; 	
+ }
+
+ table {
+	margin: 0 auto;
+	border: 2px solid black;
+	border-collapse: collapse;
+	width: 200px;
+}
+
+ th {
+	background-color: black;
+	color: yellow;
+}
+ .tablea tr:nth-child(2n){
+	 background-color: gray;	
+}
+nav {
+	background-color: black;
+	height: 3em;
+	width: 100%;
+}
+aside{
+	height: 40em;
+	width: 5%;
+	float: left;
+	background-color: gray;	
+}
+article{
+	width: 90%;
+	height: 40em;
+	border-collapse:collapse;
+	margin: 0 auto;	
+	float: left;
+	text-align: center;	
+} 
+article2{
+	height: 40em;
+	width: 5%;	
+	background-color: gray;
+	float:right;
+}
+footer{
+	clear:both;
+	background-color: orange;
+}
+ 
+</style>

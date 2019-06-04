@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<style>
+table{
+	margin: 0 auto;
+	width: 50%;	    
+}
+
+	
+
+
+#show, #text{
+	background-color: green;
+	text-align: center;
+	height: 30px;
+}
+#notice {
+	background-color: yellow;
+	text-align: center;
+	height: 300px;
+}
+#button{
+	border: 0px
+	
+}
+</style>
+<script type="text/javascript">
+window.onload = function(){
+	$('#show').click( function(){
+		$('#notice').show();	
+	});
+	$('#hide').click( function(){
+		$('#notice').hide();	
+	});
+};
+
+</script>
+
+</head>
+<body>
+<table border= 1>
+<tr><td id = "show">[오늘의 공지사항]</td></tr>
+<tr><td id = "notice" style="display:none;"><p>오늘은 jQuery 프로그램을 학습합니다.<br/>예제를 작성한 후 실행해보세요</td></tr>
+<tr><td id = "text">Toggle slide</td></tr>
+<tr><td id = "button"><button id = "hide">Stop sliding</button></td></tr>
+</table>
+</body>
+</html>

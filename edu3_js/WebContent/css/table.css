@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+table {
+	margin: 0 auto;
+	border: 2px solid black;
+	border-collapse: collapse;
+	width: 500px; height: 150px;
+	border-color: blue;
+}
+
+ th {
+	text-align: right;
+	
+}
+td {
+	text-align: center;
+	background-color: gray;
+	miargin: 10px;
+}
+ .tablea tr:nth-child(2n){
+	 background-color: gray;	
+}
+ .tablea tr:hover{
+	background-color: orange;
+	font-weight: 	bold;
+	font-size: 120%;
+}

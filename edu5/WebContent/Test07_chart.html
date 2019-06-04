@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+<style>
+#container {
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
+	margin: 0 auto
+}
+</style>
+
+<script type="text/javascript">
+	$(function() {
+		$('#btn').click(function() {
+			$.ajax({
+				url : 'chart_data.jsp',
+				dataType : 'json',
+				success : function(data) {
+					chart(data);
+				},
+				error : function(e) {
+					alert('error : ' + e.name)
+				}
+			})
+		})
+	})
+
+	function chart(data) {
+		Highcharts.chart('container', {
+
+			title : {
+				text : '오늘의 날씨'
+			},
+
+			subtitle : {
+				text : 'Source: thesolarfoundation.com'
+			},
+
+			yAxis : {
+				title : {
+					text : 'Number of Employees'
+				}
+			},
+			legend : {
+				layout : 'vertical',
+				align : 'right',
+				verticalAlign : 'middle'
+			},
+
+			plotOptions : {
+				series : {
+					label : {
+						connectorAllowed : false
+					},
+					pointStart : 2010
+				}
+			},
+
+			series : data,
+
+			responsive : {
+				rules : [ {
+					condition : {
+						maxWidth : 500
+					},
+					chartOptions : {
+						legend : {
+							layout : 'horizontal',
+							align : 'center',
+							verticalAlign : 'bottom'
+						}
+					}
+				} ]
+			}
+
+		});
+	}
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<button id="btn">차트보기</button>
+	<div id="container"></div>
+
+</body>
+
+</html>

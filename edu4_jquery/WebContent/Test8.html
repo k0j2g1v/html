@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>jQuery image</title>
+</head>
+<body>
+	<img id="img1" src="./img/고양이1.jpg">
+	<button class="l" onclick="left()">next</button>
+	<button class="r" onclick="right()">back</button>
+	
+<script>
+var index = 0
+var m = ["./img/고양이1.jpg","./img/고양이2.jpg","./img/고양이3.jpg","./img/고양이4.jpg","./img/고양이5.jpg"]
+var x = document.getElementById('img1');	
+//var x = $('#img')
+function left() {
+	if(index == 4) index= -1;	
+	x.setAttribute('src',m[++index])
+	//x.attr('src',m[++index])
+}
+
+function right() {
+	if(index == 0) index=4;
+	x.setAttribute('src',m[--index])
+	//x.attr('src',m[--index])
+}
+
+
+</script>
+</body>
+</html>

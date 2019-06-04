@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>login</title>
+
+<script type="text/javascript">
+
+function check(){
+	var id = document.getElementById('id')
+	var pw = document.getElementById('pw')
+	
+	if(id.value == "" || id.value.trim().length == 0){
+	//if(id.value == "" || id.value.trim().length < 5){
+		alert('ID가 입력되지 않았습니다.')
+		//alert('ID가 정확하지 않습니다. 5글자 이상 입력해주세요.')
+		id.focus();
+		return false;
+	}	
+	if(pw.value == "" || pw.value.trim().length == 0){
+		alert('PW가 입력되지 않았습니다.')
+		pw.focus();
+		return false;
+	}	
+}
+
+</script>
+
+</head>
+<body>
+<h2>로그인 폼</h2>
+<form id="form1" name="form1" action="process.jsp" 
+		method = "get"  onsubmit="return check()">
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td><input type="text" id="id" name='id'></td>
+		</tr>
+		<tr>
+			<td>PW</td>
+			<td><input type="text" id="pw" name='pw'></td>
+		</tr>
+		<tr align = center>
+			<td colspan = "2">
+				<input type="submit" value = "로그인">
+				<input type="reset" value = "취소">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<a href = "회원가입">회원가입</a>
+			</td>
+		</tr>
+	</table>
+	
+</form>
+</body>
+</html>

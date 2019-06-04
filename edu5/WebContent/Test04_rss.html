@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+#msg{
+	width:500px;
+	height: 300px;
+	overflow: scroll;
+}
+</style>
+<script>
+const log = console.log;
+getxmlData()
+var xdata;
+$(function() {
+	$('#btn').click(function() {
+		getxmlData();
+	})
+});
+function getxmlData(){
+	//$.ajax({ 환경 정보 셋팅});
+	//url:'http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108',
+	$.ajax({
+		url:'chart_data.jsp',
+		success:function(data){			
+			xdata= data;
+			displayxml(data);
+		},
+		error:function(e){
+			$('#msg').text("error: "+e)
+		}
+	});
+};
+function displayxml(data){
+	var result="";
+	result += name;
+	$(data).each(function (index,item) {
+		result += item.name
+	})
+		
+	
+	
+	$('#msg').html(result);
+	};
+	
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<button id="btn" >Get Data(xml)</button>
+	<div id="msg"></div>
+</body>
+</html>

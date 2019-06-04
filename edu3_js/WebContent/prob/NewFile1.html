@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	
+	var data = [                     
+		{"name":"홍길동","age":27},
+		{"name":"김길동","age":37},
+		{"name":"고길동","age":21},
+		{"name":"최길동","age":47}
+		]
+		
+	var s3 = JSON.stringify(data)	
+	var obj3 = JSON.parse(s3)
+	
+	const log = console.log;
+	function getData()
+	{
+		var result = document.getElementById('result')
+		var tag = '';
+		var tag += '<table>'
+		
+		for(let data of obj3){
+			tag += '<tr><td>'
+			tag += data.name
+			tag += '</td></tr>'
+		}
+		tag='</table>'
+		result.innerHTML = tag;
+		
+	}
+	
+</script>
+</head>
+<body>
+
+	<button onclick="getData()">Date 가져오기</button><br>
+	<div id="result"></div>
+</body>
+</html>

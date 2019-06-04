@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	ul {
+		
+	}
+	.menu1 li {
+		list-style: none;
+		display: inline;
+		padding: 0.5em;
+		float: left;
+	}
+	.menu2 li{
+		list-style: none;
+		display: inline;
+		padding: 0.5em;
+	}
+	.menu1 li:nth-child(2n) {
+	background-color: red;	
+}
+	.menu1 li:nth-child(2n+1) {
+	background-color: blue;
+}
+	.menu1 li:first-child {
+	border-radius: 10px 0 0 10px;
+}
+	.menu1 li:last-child {
+	border-radius: 0 10px 10px 0;	
+}
+a{
+	text-decoration: none;
+}
+</style>
+
+
+<body>
+<ul class="menu1">
+	<li>메뉴1</li>
+	<li>메뉴2</li>
+	<li>메뉴3</li>
+	<li>메뉴4</li>
+	<li>메뉴5</li>
+	<li>메뉴6</li>
+	<li>메뉴7</li>
+</ul>
+<br><br>
+<ul class="menu2">
+	<li>메뉴1</li>
+	<li>메뉴2</li>
+	<li>메뉴3</li>
+	<li>메뉴4</li>
+	<li>메뉴5</li>
+	<li>메뉴6</li>
+	<li>메뉴7</li>
+</ul>
+<br><br>
+<ul class="menu1">
+	<li><a href="#">메뉴 1</a></li>
+	<li><a href="#">메뉴 2</a></li>
+	<li><a href="#">메뉴 3</a></li>
+	<li><a href="#">메뉴 4</a></li>
+	<li><a href="#">메뉴 5 </a></li>
+	<li><a href="#">메뉴 6</a></li>
+</ul>
+<br><br>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Title</title>
+<style type="text/css">
+input.btn{
+    width: 50px;
+    height: 40px;
+    margin: 5px;
+    font-size: 15pt;
+}
+.btn:hover , .clr:hover , .equal:hover{
+    background-color: gray;
+    
+
+}
+.clr, .equal{
+    width: 112px;
+    height: 40px;
+    margin: 5px;
+    font-size: 15pt;
+}
+#display{
+    width: 295px;
+    height: 40px;
+    margin: 5px;
+    border:2px solid green;
+    font-size: 22pt;
+    text-align: right;
+}
+table{
+    border:2px solid blue;
+}
+</style>
+<script>
+    function add() {
+        let x = parseInt(document.getElementById("x").value)  
+        let y = parseInt(document.getElementById("y").value)
+
+        document.getElementById("sum").value = x+y
+        let flag = confirm('Do I submit this page to server?')
+        return flag;
+    }
+    
+    function compute(){
+        answer = eval(document.getElementById("display").value)
+        document.getElementById("display").value = answer
+    }
+    function buttonClicked(a){
+        if(document.getElementById("display").value == 0){
+            document.getElementById("display").value = a;
+        }
+        else{
+            if(Number.isInteger(a)){
+                s = document.getElementById("display").value;
+                document.getElementById("display").value = s+a;
+            } else{
+                var fullStr = document.getElementById("display").value
+                var lastChar = fullStr.charAt(fullStr.length-1);
+                if(lastChar == '+' || lastChar == '-' ||lastChar == '*' ||lastChar == '/' ||lastChar == '%' ||lastChar == '.'){
+                    var sliceStr = fullStr.slice(0,-1);
+                    document.getElementById("display").value = sliceStr+a;
+                } else {
+                    s = document.getElementById("display").value;
+                    document.getElementById("display").value = s+a;
+                }
+            }
+            
+        }
+        
+    }
+    function CButtonclicked(){
+        document.getElementById("display").value=0;
+    }
+</script>
+</head>
+<body>
+    <h2 align="center">계 산 기</h2>
+    
+        <table border="0" align="center">
+            <tr>
+                <td colspan="5"><input type="text" id="display" value="0"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="btn" onclick = "buttonClicked(7)"></td>
+                <td><input type="button" value="8" class="btn" onclick = "buttonClicked(8)"></td>
+                <td><input type="button" value="9" class="btn" onclick = "buttonClicked(9)"></td>
+                <td colspan="2"><input type="reset" value="C" class="clr" onclick = "CButtonclicked()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="btn" onclick = "buttonClicked(4)"></td>
+                <td><input type="button" value="5" class="btn" onclick = "buttonClicked(5)"></td>
+                <td><input type="button" value="6" class="btn" onclick = "buttonClicked(6)"></td>
+                <td><input type="button" value="/" class="btn" onclick = "buttonClicked(value)"></td>
+                <td><input type="button" value="%" class="btn" onclick = "buttonClicked(value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="btn" onclick = "buttonClicked(1)"></td>
+                <td><input type="button" value="2" class="btn" onclick = "buttonClicked(2)"></td>
+                <td><input type="button" value="3" class="btn" onclick = "buttonClicked(3)"></td>
+                <td><input type="button" value="*" class="btn" onclick = "buttonClicked(value)"></td>
+                <td><input type="button" value="+" class="btn" onclick = "buttonClicked(value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" class="btn" onclick = "buttonClicked(0)"></td>
+                <td><input type="button" value="." class="btn" onclick = "buttonClicked(value)"></td>
+                <td colspan="2"><input type="button" value="=" class="equal" onclick ="compute()"></td>
+                <td><input type="button" value="-" class="btn" onclick = "buttonClicked(value)"></td>
+            </tr>
+        </table>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

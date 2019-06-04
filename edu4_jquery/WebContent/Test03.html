@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> src="./js/jquery-3.4.1.min.js"</script>
+<script>
+/*
+window.onload = function(){
+	//$('h1').click(함수)
+	$('h1').click( function(){
+		$(this).hide();	
+	});
+};
+
+// p456
+$(document).ready( function () {
+	$('#j3').click(function () {
+		$(this).hide();
+	});
+});
+*/
+$(function(){
+	$('h2').click(function() {
+		$(this).hide()
+	});
+});
+
+</script>
+
+
+</head>
+<body>
+
+<h1> 클릭하면 사라집니다. </h1>
+<h2>hello jQuery1</h2>
+<h2>hello jQuery2</h2>
+<h2 id='j3'>hello jQuery3</h2>
+<h2 class='jc'>hello jQuery4</h2>
+<h2 class='jc'>hello jQuery5</h2>
+<h2>hello jQuery5</h2>
+</body>
+</html>

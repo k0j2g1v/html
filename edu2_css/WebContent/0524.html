@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="./css/button.css">
+<title>Insert title here</title>
+<style>
+  
+.btn {
+	width: 60px;
+	height:50px;	
+	border: 1px solid black;	
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 5px 5px 5px gray;
+	margin: 2px;
+	font-size: 15pt;		
+ }
+ .btn:hover , .middlebox:hover{
+	background-color: red;
+	text-shadow: 5px 5px 5px red;    
+}
+ .longbox{
+     width: 200px;
+     height: 40px;
+     text-align: right;
+     border: 2px solid green;
+     border-radius: 5px 5px 5px 5px;
+	box-shadow: 5px 5px 5px gray;
+	margin: 5px;
+	font-size: 15pt;
+ }
+ .middlebox{
+     width:130px;
+     height: 50px;
+     text-align: center;
+     border: 1px solid black;
+     border-radius: 5px 5px 5px 5px;
+	 box-shadow: 5px 5px 5px gray;
+	 margin: 5px;
+	 font-size: 15pt;
+ }
+
+</style>
+</head>
+
+<body>
+    <table border ="0" style="border: 2px solid blue;">
+<tr>
+    <th colspan="5" class = "longbox"> 0</th>
+</tr>
+<tr>
+    <td><input type="button" value="7" class="btn"></td>
+    <td><input type="button" value="8" class="btn"></td>
+    <td><input type="button" value="9" class="btn"></td>
+    <td colspan="2"><input type="button" value="C" class="middlebox"></td>
+</tr>
+<tr>
+    <td><input type="button" value="4" class="btn"></td>
+    <td><input type="button" value="5" class="btn"></td>
+    <td><input type="button" value="6" class="btn"></td>
+    <td><input type="button" value="/" class="btn"></td>
+    <td><input type="button" value="%" class="btn"></td>
+</tr>
+<tr>
+    <td><input type="button" value="1" class="btn"></td>
+    <td><input type="button" value="2" class="btn"></td>
+    <td><input type="button" value="3" class="btn"></td>
+    <td><input type="button" value="*" class="btn"></td>
+    <td><input type="button" value="+" class="btn"></td>
+</tr>
+<tr>
+    <td><input type="button" value="0" class="btn"></td>
+    <td><input type="button" value="." class="btn"></td>
+    <td colspan="2"><input type="button" value="=" class="middlebox"></td>
+    <td><input type="button" value="-" class="btn"></td>
+</tr>
+</table>
+
+</body>
+</html>

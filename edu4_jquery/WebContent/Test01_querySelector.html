@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+<title>querySelector</title>
+<script>
+    window.onload = function() {
+	    document.querySelector('h1').style.backgroundColor ='red'
+		document.querySelector('p').style.color ='blue'
+	
+    }
+	function changeImage(){
+		var cname = document.querySelector('#img1').src
+		cname = cname.substring(cname.lastIndexOf('/'))
+		if(cname == '/coffee2.gif')
+		document.querySelector('#img1').src = "./img/coffee1.gif"
+		else
+		document.querySelector('#img1').src = "./img/coffee2.gif"
+	    }
+</script>
+</head>
+<body>
+	<h1>querySelector</h1>
+	<p>getElementByID , getElementByEagName ~~ old
+	<p>querySelector , querySelectorAll ~~~ new 
+	<br/>	
+	<img id="img1" alt="coffee1.gif" width= '200px' height='200px' src="./img/coffee1.gif"/>
+	<input type="button" onclick="changeImage()" value="바꾸기" />	
+	<br/><br/>
+	<h1>hello 1</h1>
+	<h1 id="h1">hello 2</h1>
+	<h1 class="hc">hello 3</h1>
+	<h1>hello 4</h1>
+	<h1 class="hc">hello 5</h1>
+	<h1>hello 6</h1>
+	<p> document.querySelector('#h1')  // id 호출
+	<p> document.querySelectorAll('.hc') // class 호출
+	
+	$('h1').eq(1)
+	$('h1:eq(1)')
+	$('h1:eq(1)').text()
+	$('h1:eq(1)').text('~~~~~')
+​
+	
+</body>
+</html>

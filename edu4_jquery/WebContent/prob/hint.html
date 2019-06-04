@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){	
+	$('#result1').click( function(){
+		$('p.A1').show();	
+	})
+	$('#result2').click( function(){
+		$('p.A2').show();	
+	});
+};
+</script>
+</head>
+<body>
+<h1>질문1 : 대한민국의 수도는 어디입니까</h1>
+<div id = "result1">[정답보기]</div><br/>
+<p class = "A1" style="display: none;">대한민국의 수도는 서울입니다.</p><br/>
+<h1>질문2 : 대한민국의 국보1호는 무엇입니까?</h1>
+<div id = "result2">[정답보기]</div><br/>
+<p class = "A2" style="display: none;">대한민국의 국보1호는 숭례문입니다.</p>
+</body>
+</html>

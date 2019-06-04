@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>회원가입폼</title>
+</head>
+<body>
+    <h2>회원가입폼</h2>
+    
+    <form action="" method="post">
+    
+이름:<input type="text" name="name" value="홍길동" readonly="readonly"><br>
+별명:<input type="text" name="alias" maxlength="12" size="7"><br>
+pw:<input type="password" name="pw" maxlength="8" size="8"><br>
+        <br>
+        <br>
+
+성별 : <input type="radio" name="gender" value="m">남
+      <input type="radio" name="gender" value="f">여<br>
+          <br>
+          <br>
+        
+취미 : <input type="checkbox" name="hobby" value="cooking">요리
+      <input type="checkbox" name="hobby" value="reading">독서
+     <input type="checkbox" name="hobby" value="game">게임 <br>
+        <br>
+        <br>
+
+os 선택 : <select name="os" multiple="multiple">
+             <option value="window7">window7</option>
+             <option value="window10">window10</option>
+             <option value="centos">centos</option>
+             <option value="mac">mac</option>
+        </select> 
+        <br><br>
+하고싶은말:<br>
+       <textarea rows="10" cols="50">
+       </textarea>         
+  
+            <br>
+            <br>
+        생년월일 : <input type="date" name="date"> <br/>
+        <input type="submit">
+        <input type="reset">
+      
+    </form>
+</body>
+</html>

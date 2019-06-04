@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+<script>
+	
+	var adress = [                     
+		{"name":"홍길동","age":27,"area":"수원","adress":"매탄동 잉어킹아파트 101-101","tell":"010-5154-1584"},
+		{"name":"김길동","age":37,"area":"경주","adress":"화랑동 주몽아파트 101-403","tell":"010-8478-4867"},
+		{"name":"고길동","age":21,"area":"창원","adress":"남양동 성원아파트 101-1005","tell":"010-1847-8498"},
+		{"name":"최길동","age":47,"area":"서울","adress":"역삼동 삼각아파트 105-2001","tell":"010-8479-8478"},
+		{"name":"박길동","age":47,"area":"우주","adress":"은하수 소행성아파트","tell":"010-6547-3157"}
+		]
+	var s3 = JSON.stringify(adress)	
+	var obj3 = JSON.parse(s3)
+	
+	const log = console.log;
+	function getData(){
+		var result = document.getElementById('result')
+		var tag='';
+		var	tag +='<table border = 1><tr><th>이름</th><th>나이</th><th>지역</th><th>주소</th><th>연락처</th></tr>'				
+		
+			for(let data of obj3){
+			tag +='<tr>'
+			tag +='<td>'+data.name+'</td>'
+			tag +='<td>'+data.age+'</td>'
+			tag +='<td>'+data.area+'</td>'
+			tag +='<td>'+data.adress+'</td>'
+			tag +='<td>'+data.tell+'</td></tr>'
+				}
+			tag += '</table>'	
+			
+		result.innerHTML = tag;		
+	}
+	
+</script>
+</head>
+<body>
+
+	<button onclick="getData()">Date 가져오기</button><br>
+	<div id="result"></div>
+</body>
+</html>
